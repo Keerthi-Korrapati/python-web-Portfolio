@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+    <main class="main main--project">
+        <div>
+            <img
+                class="hero"
+                src="{{ url_for('static', filename=project['hero']) }}"
+                alt="A hand holding a pen, about to write something in a project planner."
+            />
+
+            <article class="project">
+                <article class="project__content">
+                    <h2 class="project__heading">{{ project['name'] }}</h2>
+
+                    <p>
+                        Hi, I'm Keerthi! I love to code and master software development.
+                        I've been searching in online, and I founded Teclado to learn software
+                        development i.e., truly understand everything
+                        that goes on behind the scenes.
+                    </p>
+                    <p>
+                        Coding is extremely rewarding. As we learn, things start to click and make sense.
+                        We can learn from the dots of all the things that weren't quite clear before.
+                        I'm here to make my journey quick and painless!
+                    </p>
+                </article>
+
+                <section>
+                    <article class="project__meta-group">
+                        <h3 class="project__heading project__heading--meta">Technologies used</h3>
+
+                        <ul class="technology-list">
+                            <li class="technology-list__item">Python</li>
+                            <li class="technology-list__item">HTML</li>
+                            <li class="technology-list__item">CSS</li>
+                        </ul>
+                    </article>
+
+                    <a class="cta" href="{{ project['prod'] }}">
+                        <img class="cta__icon" src="{{ url_for('static', filename='img/pointer.png') }}">
+                        View in production
+                    </a>
+                </section>
+            </article>
+        </div>
+    </main>
+{% endblock %}
